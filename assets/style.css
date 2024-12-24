@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.hero, .header, .footer {
+  transition: all 0.3s ease;
+}
+
+body.light {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #121212;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 10rem;
+  background-color: #fd28dd;
+  z-index: 1000;
+}
+
+.logo h1 {
+  font-size: 2rem;
+  color: white;
+}
+
+.nav-toggle-button {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+.nav-container {
+  display: flex;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  font-size: 1rem;
+  color: white;
+  padding: 0.5rem;
+}
+
+.nav-link:hover {
+  background-color: #b0199a;
+  border-radius: 5px;
+}
+
+.toggle-button {
+  font-size: 1.5rem;
+  color: inherit;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 92.5vh;
+  text-align: left;
+  padding: 2rem;
+}
+
+.hero {
+  padding: 2rem;
+  max-width: 800px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #7d7d7d;
+}
+
+.cta-button {
+  padding: 0.8rem 2.5rem;
+  background-color: #fd28dd; 
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.cta-button a {
+  color: white;
+}
+
+.cta-button:hover {
+  background-color: #b0199a;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1rem;
+}
+
+@media (max-width: 720px) {
+  
+  .header {
+    padding: 0.5rem 2rem;
+  }
+  
+  .nav-container {
+    display: none;
+  }
+
+  .nav-toggle-button {
+    display: block;
+  }
+
+  .nav-container.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #333;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-bottom: 1px solid #f5f5f5;
+  }
+
+  .cta-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+
+  .hero {
+    padding: 2rem;
+  }
+}
